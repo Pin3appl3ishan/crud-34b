@@ -1,4 +1,4 @@
-package com.example.crud_34b
+package com.example.crud_34b.ui.activity
 
 import android.os.Bundle
 import android.widget.Toast
@@ -6,6 +6,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.crud_34b.R
 import com.example.crud_34b.databinding.ActivityForgetBinding
 import com.google.firebase.auth.FirebaseAuth
 

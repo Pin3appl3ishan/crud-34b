@@ -8,10 +8,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.crud_34b.R
-import com.example.crud_34b.UpdateProductActivity
-import com.example.crud_34b.model.ProductMModel
+import com.example.crud_34b.ui.activity.UpdateProductActivity
+import com.example.crud_34b.model.ProductModel
 
-class ProductAdapter (var context: Context, var data : ArrayList<ProductMModel>) :
+class ProductAdapter (var context: Context, var data : ArrayList<ProductModel>) :
     RecyclerView.Adapter<ProductAdapter.ProductViewHolder>(){
     class ProductViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         var productName : TextView = view.findViewById(R.id.lblName)
@@ -47,6 +47,16 @@ class ProductAdapter (var context: Context, var data : ArrayList<ProductMModel>)
 
     fun getProductID(position: Int) : String {
         return data[position].id
+    }
+
+    fun getImageName(position: Int) : String {
+        return data[position].imageName
+    }
+
+    fun updateData(products: List<ProductModel>) {
+        data.clear()
+        data.addAll(products)
+        notifyDataSetChanged()
     }
 
 }

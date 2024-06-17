@@ -2,10 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -18,34 +17,28 @@
         android:theme="@style/Theme.Crud_34b"
         tools:targetApi="31">
         <activity
-            android:name=".UpdateProductActivity"
+            android:name=".ui.activity.SensorDashboardActivity"
             android:exported="true" />
         <activity
-            android:name=".ForgetActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:name=".ui.activity.SensorListActivity"
+            android:exported="false" />
         <activity
-            android:name=".DashBoardActivity"
+            android:name=".ui.activity.UpdateProductActivity"
             android:exported="true" />
         <activity
-            android:name=".AddProductActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:name=".ui.activity.ForgetActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activity.AddProductActivity"
+            android:exported="true" />
         <activity
             android:name=".LogIn"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.activity.DashBoardActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

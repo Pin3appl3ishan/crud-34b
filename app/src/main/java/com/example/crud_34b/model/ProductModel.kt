@@ -3,16 +3,20 @@ package com.example.crud_34b.model
 import android.os.Parcel
 import android.os.Parcelable
 
-class ProductMModel(
+class ProductModel(
     var id : String = "",
     var name: String = "",
     var price: Int = 0,
-    var description: String = ""
+    var description: String = "",
+    var url: String = "",
+    var imageName: String = ""
 ) : Parcelable{
     constructor(parcel: Parcel) : this(
         parcel.readString() ?: "",
         parcel.readString() ?: "",
         parcel.readInt(),
+        parcel.readString() ?: "",
+        parcel.readString() ?: "",
         parcel.readString() ?: ""
     ) {
     }
@@ -22,18 +26,20 @@ class ProductMModel(
         parcel.writeString(name)
         parcel.writeInt(price)
         parcel.writeString(description)
+        parcel.writeString(url)
+        parcel.writeString(imageName)
     }
 
     override fun describeContents(): Int {
         return 0
     }
 
-    companion object CREATOR : Parcelable.Creator<ProductMModel> {
-        override fun createFromParcel(parcel: Parcel): ProductMModel {
-            return ProductMModel(parcel)
+    companion object CREATOR : Parcelable.Creator<ProductModel> {
+        override fun createFromParcel(parcel: Parcel): ProductModel {
+            return ProductModel(parcel)
         }
 
-        override fun newArray(size: Int): Array<ProductMModel?> {
+        override fun newArray(size: Int): Array<ProductModel?> {
             return arrayOfNulls(size)
         }
     }
