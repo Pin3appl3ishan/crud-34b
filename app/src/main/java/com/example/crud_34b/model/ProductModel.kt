@@ -3,7 +3,7 @@ package com.example.crud_34b.model
 import android.os.Parcel
 import android.os.Parcelable
 
-class ProductModel(
+data class ProductModel(
     var id : String = "",
     var name: String = "",
     var price: Int = 0,

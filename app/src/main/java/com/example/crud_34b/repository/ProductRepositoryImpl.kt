@@ -47,7 +47,8 @@ class ProductRepositoryImpl : ProductRepository {
             } else {
                     callback(false, "Unable to upload data")
             }
-        }    }
+        }
+    }
 
     override fun getAllProduct(callback: (List<ProductModel>?, Boolean, String?) -> Unit) {
         ref.addValueEventListener(object : ValueEventListener {

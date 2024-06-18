@@ -20,9 +20,6 @@ import com.example.crud_34b.viewmodel.ProductViewModel
 class DashBoardActivity : AppCompatActivity() {
     lateinit var dashBoardBinding: ActivityDashBoardBinding
 
-/*
-    var productList = ArrayList<ProductModel>()
-*/
     lateinit var productAdapter: ProductAdapter
 
     lateinit var productViewModel : ProductViewModel
