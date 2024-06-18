@@ -11,18 +11,30 @@ import com.example.crud_34b.databinding.ActivitySensorDashboardBinding
 
 class SensorDashboardActivity : AppCompatActivity() {
 
-    lateinit var sensorDashboardActivity: ActivitySensorDashboardBinding
+    lateinit var sensorDashboardBinding: ActivitySensorDashboardBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        sensorDashboardActivity = ActivitySensorDashboardBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_sensor_dashboard)
+        sensorDashboardBinding = ActivitySensorDashboardBinding.inflate(layoutInflater)
+        setContentView(sensorDashboardBinding.root)
 
-        sensorDashboardActivity.btnList.setOnClickListener {
+        sensorDashboardBinding.btnList.setOnClickListener {
             var intent = Intent(this@SensorDashboardActivity,
                 SensorListActivity::class.java)
+            startActivity(intent)
+        }
+
+        sensorDashboardBinding.btnLightSensor.setOnClickListener {
+            var intent = Intent(this@SensorDashboardActivity,
+                LightSensorActivity::class.java)
+            startActivity(intent)
+        }
+
+        sensorDashboardBinding.btnAcclerate.setOnClickListener {
+            var intent = Intent(this@SensorDashboardActivity,
+                AccelerometerActivity::class.java)
             startActivity(intent)
         }
 
